@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - MY ENGLISH</title>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #1E88E5;
             --secondary: #1565C0;
             --bg: #f8fafc;
             --text: #1e293b;
-            --text-light: #64748b;
+            --text-light: #475569; /* একটু গাঢ় করা হয়েছে */
             --white: #ffffff;
         }
 
@@ -22,6 +22,7 @@
             line-height: 1.7;
             margin: 0;
             padding: 0;
+            scroll-behavior: smooth; /* স্মুথ স্ক্রলিং */
         }
 
         .container {
@@ -38,11 +39,60 @@
             border-radius: 24px;
             text-align: center;
             box-shadow: 0 10px 30px rgba(30, 136, 229, 0.2);
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .hero h1 { margin: 0; font-size: 2.5rem; font-weight: 700; }
         .hero p { margin: 10px 0 0; opacity: 0.9; font-size: 1.1rem; }
+
+        /* Table of Contents (সূচিপত্র) */
+        .toc {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid #e2e8f0;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            color: var(--secondary);
+            font-size: 1.3rem;
+            border-bottom: 2px solid #eff6ff;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+        }
+
+        .toc li a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+        }
+
+        .toc li a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .toc li a::before {
+            content: "•";
+            color: var(--primary);
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
 
         /* Card Section */
         .section {
@@ -54,8 +104,18 @@
             border-left: 6px solid var(--primary);
         }
 
-        .lang-bn { color: var(--text); font-weight: 600; font-size: 1.15rem; margin-bottom: 10px; }
-        .lang-en { color: var(--text-light); font-size: 0.95rem; border-top: 1px dashed #e2e8f0; pt: 10px; margin-top: 10px; padding-top: 10px; }
+        .lang-bn { color: var(--text); font-weight: 600; font-size: 1.15rem; margin-bottom: 12px; }
+        
+        /* English Text - Bold and Styled */
+        .lang-en { 
+            color: var(--text-light); 
+            font-size: 1rem; 
+            font-weight: 700; /* বোল্ড করা হয়েছে */
+            border-top: 1px dashed #e2e8f0; 
+            margin-top: 12px; 
+            padding-top: 12px;
+            font-family: 'Inter', sans-serif;
+        }
 
         .section-title { display: flex; align-items: center; margin-bottom: 20px; gap: 15px; }
         .icon { font-size: 24px; background: #eff6ff; padding: 10px; border-radius: 12px; }
@@ -72,7 +132,7 @@
         }
 
         .contact h2 { color: white; margin-bottom: 25px; }
-        .contact-info { margin-bottom: 20px; line-height: 2; }
+        .contact-info { margin-bottom: 20px; line-height: 2; font-weight: 600; }
         .btn {
             display: inline-block;
             background: var(--primary);
@@ -80,16 +140,17 @@
             padding: 14px 35px;
             text-decoration: none;
             border-radius: 50px;
-            font-weight: 600;
+            font-weight: 700;
             transition: 0.3s;
         }
         .btn:hover { background: var(--secondary); transform: translateY(-2px); }
 
-        footer { text-align: center; padding: 40px 0; color: var(--text-light); font-size: 0.9rem; }
+        footer { text-align: center; padding: 40px 0; color: var(--text-light); font-size: 0.9rem; font-weight: 600; }
 
         @media (max-width: 600px) {
             .hero h1 { font-size: 1.8rem; }
             .section { padding: 20px; }
+            .toc ul { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -99,17 +160,33 @@
     <header class="hero">
         <h1>MY ENGLISH</h1>
         <p>Privacy Policy | গোপনীয়তা নীতি</p>
-        <p style="font-size: 0.9rem;">কার্যকর তারিখ: ২২ মে, ২০২৬  •  Effective Date: May 22, 2026</p>
+        <p style="font-size: 0.9rem; font-weight: 600;">কার্যকর তারিখ: ২২ মে, ২০২৬  •  Effective Date: May 22, 2026</p>
     </header>
 
+    <!-- সূচিপত্র (Table of Contents) -->
+    <nav class="toc">
+        <h3>📋 সূচিপত্র | Table of Contents</h3>
+        <ul>
+            <li><a href="#intro">পরিচিতি | Introduction</a></li>
+            <li><a href="#data-collect">০১. কি তথ্য সংগ্রহ করি | Data Collection</a></li>
+            <li><a href="#data-use">০২. তথ্যের ব্যবহার | Data Usage</a></li>
+            <li><a href="#third-party">০৩. থার্ড-পার্টি পরিষেবা | Third-Party</a></li>
+            <li><a href="#security">০৪. তথ্য সুরক্ষা | Security</a></li>
+            <li><a href="#rights">০৫. আপনার অধিকার | Your Rights</a></li>
+            <li><a href="#children">০৬. শিশুদের গোপনীয়তা | Children</a></li>
+            <li><a href="#permissions">০৭. App Permissions</a></li>
+            <li><a href="#contact">০৮. যোগাযোগ | Contact Us</a></li>
+        </ul>
+    </nav>
+
     <!-- Intro -->
-    <div class="section">
-        <div class="lang-bn">MY ENGLISH ("আমরা", "আমাদের") আপনার গোপনীয়তাকে সর্বোচ্চ গুরুত্ব দেয়। এই Privacy Policy ব্যাখ্যা করে যে আমরা কোন তথ্য সংগ্রহ করি  না। এই অ্যাপটি ব্যবহার করার মাধ্যমে আপনি এই Policy-তে সম্মত হচ্ছেন। এটি একটি সম্পূর্ণ অফলাইন লার্নিং অ্যাপ্লিকেশন।</div>
-        <div class="lang-en">MY ENGLISH ("we", "our", or "us") prioritizes your privacy. This Privacy Policy explains how we collect (or don't collect), use, and protect your information. By using this app, you agree to this policy. This is a fully offline learning application.</div>
+    <div class="section" id="intro">
+        <div class="lang-bn">MY ENGLISH ("আমরা", "আমাদের") আপনার গোপনীয়তাকে সর্বোচ্চ গুরুত্ব দেয়। এই Privacy Policy ব্যাখ্যা করে যে আমরা কোন তথ্য সংগ্রহ করি না। এই অ্যাপটি ব্যবহার করার মাধ্যমে আপনি এই Policy-তে সম্মত হচ্ছেন। এটি একটি সম্পূর্ণ অফলাইন লার্নিং অ্যাপ্লিকেশন।</div>
+        <div class="lang-en">MY ENGLISH ("we", "our", or "us") prioritizes your privacy. This Privacy Policy explains that we do not collect any information. By using this app, you agree to this policy. This is a fully offline learning application.</div>
     </div>
 
     <!-- Section 1 -->
-    <div class="section">
+    <div class="section" id="data-collect">
         <div class="section-title">
             <div class="icon">👤</div>
             <h2>০১. কি তথ্য সংগ্রহ করি | What Data We Collect</h2>
@@ -119,7 +196,7 @@
     </div>
 
     <!-- Section 2 -->
-    <div class="section">
+    <div class="section" id="data-use">
         <div class="section-title">
             <div class="icon">⚙️</div>
             <h2>০২. তথ্যের ব্যবহার | How Data is Used</h2>
@@ -129,7 +206,7 @@
     </div>
 
     <!-- Section 3 -->
-    <div class="section">
+    <div class="section" id="third-party">
         <div class="section-title">
             <div class="icon">🛡️</div>
             <h2>০৩. থার্ড-পার্টি পরিষেবা | Third-Party Services</h2>
@@ -139,17 +216,17 @@
     </div>
 
     <!-- Section 4 -->
-    <div class="section">
+    <div class="section" id="security">
         <div class="section-title">
             <div class="icon">💾</div>
             <h2>০৪. তথ্য সুরক্ষা | Data Security</h2>
         </div>
-        <div class="lang-bn">আপনার সমস্ত ডেটা ডিভাইসের SharedPreferences-এ সুরক্ষিত থাকে। আমরা আপনার কোনো তথ্য বিক্রি বা শেয়ার করি না। যেহেতু কোনো ডেটা সার্ভারে যায় না, তাই তথ্য হ্যাক হওয়ার ভয় নেই।</div>
+        <div class="lang-bn">আপনার সমস্ত ডেটা ডিভাইসের SharedPreferences-এ সংরক্ষিত থাকে। আমরা আপনার কোনো তথ্য বিক্রি বা শেয়ার করি না। যেহেতু কোনো ডেটা সার্ভারে যায় না, তাই তথ্য হ্যাক হওয়ার ভয় নেই।</div>
         <div class="lang-en">All data is secured in the device's SharedPreferences. We do not sell or share data. Since no data is sent to a server, there is no risk of data breaches.</div>
     </div>
 
     <!-- Section 5 -->
-    <div class="section">
+    <div class="section" id="rights">
         <div class="section-title">
             <div class="icon">⚖️</div>
             <h2>০৫. আপনার অধিকার | Your Rights</h2>
@@ -159,7 +236,7 @@
     </div>
 
     <!-- Section 6 -->
-    <div class="section">
+    <div class="section" id="children">
         <div class="section-title">
             <div class="icon">👶</div>
             <h2>০৬. শিশুদের গোপনীয়তা | Children's Privacy</h2>
@@ -169,7 +246,7 @@
     </div>
 
     <!-- Section 7 -->
-    <div class="section">
+    <div class="section" id="permissions">
         <div class="section-title">
             <div class="icon">🔓</div>
             <h2>০৭. App Permissions</h2>
@@ -179,7 +256,7 @@
     </div>
 
     <!-- Contact -->
-    <section class="contact">
+    <section class="contact" id="contact">
         <h2>📩 যোগাযোগ করুন | Contact Us</h2>
         <div class="contact-info">
             <strong>Developer:</strong> Mohammed Abu Sayed Ikhan<br>
