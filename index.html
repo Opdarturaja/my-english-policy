@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - MY ENGLISH</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #1E88E5;
-            --bg-color: #f8fafc;
-            --text-color: #334155;
-            --card-bg: #ffffff;
+            --primary: #1E88E5;
+            --secondary: #1565C0;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --white: #ffffff;
         }
 
         body {
-            font-family: 'Hind Siliguri', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.8;
+            font-family: 'Hind Siliguri', 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
             margin: 0;
             padding: 0;
         }
@@ -26,141 +27,167 @@
         .container {
             max-width: 900px;
             margin: 40px auto;
-            padding: 20px;
+            padding: 0 20px;
         }
 
-        /* Header Section */
-        .header {
-            background: linear-gradient(135deg, var(--primary-color), #1565C0);
+        /* Hero Header */
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            padding: 60px 20px;
+            padding: 50px 30px;
+            border-radius: 24px;
             text-align: center;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(30, 136, 229, 0.2);
+            box-shadow: 0 10px 30px rgba(30, 136, 229, 0.2);
             margin-bottom: 40px;
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 2.8em;
-            letter-spacing: 1px;
-        }
+        .hero h1 { margin: 0; font-size: 2.5rem; font-weight: 700; }
+        .hero p { margin: 10px 0 0; opacity: 0.9; font-size: 1.1rem; }
 
-        .header p {
-            margin-top: 10px;
-            opacity: 0.9;
-            font-size: 1.1em;
-        }
-
-        /* Sections */
+        /* Card Section */
         .section {
-            background: var(--card-bg);
-            padding: 35px;
-            border-radius: 15px;
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
             margin-bottom: 25px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-left: 6px solid var(--primary-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border-left: 6px solid var(--primary);
         }
 
-        .section-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
+        .lang-bn { color: var(--text); font-weight: 600; font-size: 1.15rem; margin-bottom: 10px; }
+        .lang-en { color: var(--text-light); font-size: 0.95rem; border-top: 1px dashed #e2e8f0; pt: 10px; margin-top: 10px; padding-top: 10px; }
 
-        .section-icon {
-            font-size: 32px;
-            background: #e3f2fd;
-            padding: 12px;
-            border-radius: 12px;
-            margin-right: 20px;
-        }
+        .section-title { display: flex; align-items: center; margin-bottom: 20px; gap: 15px; }
+        .icon { font-size: 24px; background: #eff6ff; padding: 10px; border-radius: 12px; }
+        h2 { margin: 0; font-size: 1.4rem; color: var(--secondary); }
 
-        .section h2 {
-            margin: 0;
-            color: #1e293b;
-            font-size: 1.6em;
-        }
-
-        .highlight {
-            background: #fff9c4;
-            padding: 2px 5px;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-
-        /* Contact Box */
-        .contact-box {
-            background: #1e293b;
+        /* Contact Card */
+        .contact {
+            background: #0f172a;
             color: white;
             padding: 40px;
-            border-radius: 20px;
+            border-radius: 24px;
             text-align: center;
             margin-top: 50px;
         }
 
-        .contact-box h2 {
-            color: white;
-            margin-bottom: 20px;
-        }
-
-        .email-btn {
+        .contact h2 { color: white; margin-bottom: 25px; }
+        .contact-info { margin-bottom: 20px; line-height: 2; }
+        .btn {
             display: inline-block;
-            background: var(--primary-color);
+            background: var(--primary);
             color: white;
-            padding: 12px 30px;
+            padding: 14px 35px;
             text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            margin-top: 15px;
-            transition: background 0.3s;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.3s;
         }
+        .btn:hover { background: var(--secondary); transform: translateY(-2px); }
 
-        .email-btn:hover {
-            background: #1565C0;
-        }
+        footer { text-align: center; padding: 40px 0; color: var(--text-light); font-size: 0.9rem; }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            color: #94a3b8;
-            font-size: 0.9em;
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+            .section { padding: 20px; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="header">
+    <header class="hero">
         <h1>MY ENGLISH</h1>
         <p>Privacy Policy | গোপনীয়তা নীতি</p>
-        <p>কার্যকর তারিখ: ২২ মে, ২০২৬ | সর্বশেষ আপডেট: ২২ মে, ২০২৬</p>
-    </div>
+        <p style="font-size: 0.9rem;">কার্যকর তারিখ: ২২ মে, ২০২৬  •  Effective Date: May 22, 2026</p>
+    </header>
 
+    <!-- Intro -->
     <div class="section">
-        <div class="section-header">
-            <div class="section-icon">👤</div>
-            <h2>আমরা কি তথ্য সংগ্রহ করি</h2>
-        </div>
-        <p><strong>MY ENGLISH</strong> একটি সম্পূর্ণ অফলাইন অ্যাপ। আমরা আপনার নাম, ইমেইল, ফোন নম্বর বা অন্য কোনো ব্যক্তিগত তথ্য সংগ্রহ করি না। অ্যাপটি ব্যবহারের জন্য কোনো অ্যাকাউন্টের প্রয়োজন নেই।</p>
+        <div class="lang-bn">MY ENGLISH ("আমরা", "আমাদের") আপনার গোপনীয়তাকে সর্বোচ্চ গুরুত্ব দেয়। এই Privacy Policy ব্যাখ্যা করে যে আমরা কোন তথ্য সংগ্রহ করি (বা করি না), কিভাবে ব্যবহার করি এবং আপনার গোপনীয়তা কিভাবে সুরক্ষিত রাখি। এই অ্যাপটি ব্যবহার করার মাধ্যমে আপনি এই Policy-তে সম্মত হচ্ছেন। এটি একটি সম্পূর্ণ অফলাইন লার্নিং অ্যাপ্লিকেশন।</div>
+        <div class="lang-en">MY ENGLISH ("we", "our", or "us") prioritizes your privacy. This Privacy Policy explains how we collect (or don't collect), use, and protect your information. By using this app, you agree to this policy. This is a fully offline learning application.</div>
     </div>
 
+    <!-- Section 1 -->
     <div class="section">
-        <div class="section-header">
-            <div class="section-icon">🛡️</div>
-            <h2>তথ্য সুরক্ষা ও ব্যবহার</h2>
+        <div class="section-title">
+            <div class="icon">👤</div>
+            <h2>০১. কি তথ্য সংগ্রহ করি | What Data We Collect</h2>
         </div>
-        <p>আপনার সমস্ত তথ্য আপনার ফোনের <span class="highlight">SharedPreferences</span>-এ লোকালভাবে সংরক্ষিত থাকে। আমরা বর্তমানে কোনো বিজ্ঞাপন বা ট্র্যাকিং পরিষেবা ব্যবহার করি না। আপনার লার্নিং প্রগ্রেস আমাদের সার্ভারে পাঠানো হয় না।</p>
+        <div class="lang-bn">🚫 <strong>ব্যক্তিগত তথ্য:</strong> আমরা আপনার নাম, ইমেইল, ফোন নম্বর বা অন্য কোনো ব্যক্তিগত তথ্য সংগ্রহ করি না। অ্যাপটি ব্যবহারের জন্য কোনো অ্যাকাউন্টের প্রয়োজন নেই। <br> 💾 <strong>লোকাল ডেটা:</strong> আপনার শেখার অগ্রগতি এবং ফেভারিট লিস্ট শুধুমাত্র আপনার ডিভাইসে সংরক্ষিত থাকে।</div>
+        <div class="lang-en">🚫 <strong>Personal Data:</strong> We do not collect names, emails, or phone numbers. No account is required. <br> 💾 <strong>Local Data:</strong> Your progress and favorites are stored locally on your device only.</div>
     </div>
 
-    <div class="contact-box">
-        <h2>যোগাযোগ করুন</h2>
-        <p>Privacy সংক্রান্ত যেকোনো প্রশ্ন বা ফিডব্যাকের জন্য সরাসরি ডেভেলপারের সাথে যোগাযোগ করুন।</p>
-        <p><strong>Developer:</strong> Mohammed Abu Sayed Ikhan</p>
-        <p><strong>Location:</strong> Bangladesh 🇧🇩</p>
-        <a href="mailto:mohammedabusayedikhan@gmail.com" class="email-btn">Email Now</a>
+    <!-- Section 2 -->
+    <div class="section">
+        <div class="section-title">
+            <div class="icon">⚙️</div>
+            <h2>০২. তথ্যের ব্যবহার | How Data is Used</h2>
+        </div>
+        <div class="lang-bn">✅ <strong>লার্নিং প্রগ্রেস:</strong> আপনার শেখার অগ্রগতি ট্র্যাক করার জন্য লোকাল ডেটা ব্যবহৃত হয়। <br> 📊 <strong>কোনো বিশ্লেষণ নেই:</strong> আমরা আপনার অ্যাপ ব্যবহারের কোনো পরিসংখ্যান আমাদের সার্ভারে পাঠাই না।</div>
+        <div class="lang-en">✅ <strong>Progress Tracking:</strong> Local data is used to track your learning journey. <br> 📊 <strong>No Analytics:</strong> We do not send any usage statistics to our servers.</div>
     </div>
+
+    <!-- Section 3 -->
+    <div class="section">
+        <div class="section-title">
+            <div class="icon">🛡️</div>
+            <h2>০৩. থার্ড-পার্টি পরিষেবা | Third-Party Services</h2>
+        </div>
+        <div class="lang-bn">🛡️ <strong>সম্পূর্ণ নিরাপদ:</strong> আমরা এই অ্যাপে কোনো থার্ড-পার্টি বিজ্ঞাপন (Ads) বা ট্র্যাকিং এসডিকে (SDK) ব্যবহার করছি না। অ্যাপটি সম্পূর্ণ বিজ্ঞাপনমুক্ত।</div>
+        <div class="lang-en">🛡️ <strong>Fully Secure:</strong> We do not use third-party ads or tracking SDKs. The app is completely ad-free.</div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section">
+        <div class="section-title">
+            <div class="icon">💾</div>
+            <h2>০৪. তথ্য সুরক্ষা | Data Security</h2>
+        </div>
+        <div class="lang-bn">আপনার সমস্ত ডেটা ডিভাইসের SharedPreferences-এ সুরক্ষিত থাকে। আমরা আপনার কোনো তথ্য বিক্রি বা শেয়ার করি না। যেহেতু কোনো ডেটা সার্ভারে যায় না, তাই তথ্য হ্যাক হওয়ার ভয় নেই।</div>
+        <div class="lang-en">All data is secured in the device's SharedPreferences. We do not sell or share data. Since no data is sent to a server, there is no risk of data breaches.</div>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section">
+        <div class="section-title">
+            <div class="icon">⚖️</div>
+            <h2>০৫. আপনার অধিকার | Your Rights</h2>
+        </div>
+        <div class="lang-bn">আপনার তথ্য আপনার ফোনেই থাকে, তাই আপনিই এর পূর্ণ নিয়ন্ত্রক। অ্যাপ আনইনস্টল করলে সমস্ত লোকাল ডেটা মুছে যাবে।</div>
+        <div class="lang-en">Your data stays on your phone; you have full control. Uninstalling the app removes all local data.</div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section">
+        <div class="section-title">
+            <div class="icon">👶</div>
+            <h2>০৬. শিশুদের গোপনীয়তা | Children's Privacy</h2>
+        </div>
+        <div class="lang-bn">এটি একটি শিক্ষামূলক অ্যাপ এবং শিশুদের জন্য ১০০% নিরাপদ। আমরা শিশুদের কাছ থেকে কোনো তথ্য সংগ্রহ করি না।</div>
+        <div class="lang-en">This is an educational app and is 100% safe for children. We do not collect any information from children.</div>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="section">
+        <div class="section-title">
+            <div class="icon">🔓</div>
+            <h2>০৭. App Permissions</h2>
+        </div>
+        <div class="lang-bn">অ্যাপটি সঠিকভাবে চালানোর জন্য কোনো বিশেষ বা সংবেদনশীল পারমিশনের (যেমন: Camera, Contacts, Location) প্রয়োজন নেই।</div>
+        <div class="lang-en">The app does not require any sensitive permissions like Camera, Contacts, or Location.</div>
+    </div>
+
+    <!-- Contact -->
+    <section class="contact">
+        <h2>📩 যোগাযোগ করুন | Contact Us</h2>
+        <div class="contact-info">
+            <strong>Developer:</strong> Mohammed Abu Sayed Ikhan<br>
+            <strong>Email:</strong> mohammedabusayedikhan@gmail.com<br>
+            <strong>Location:</strong> Bangladesh 🇧🇩
+        </div>
+        <a href="mailto:mohammedabusayedikhan@gmail.com" class="btn">Send an Email</a>
+    </section>
 
     <footer>
         &copy; 2026 MY ENGLISH Learning App | All Rights Reserved.
